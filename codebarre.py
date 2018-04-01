@@ -102,9 +102,9 @@ def declencherelay():
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(relaisPin, GPIO.OUT)
-    GPIO.output(relaisPin, True)
-    time.sleep(time_sleep_relay)#attend 1 secondes sans rien faire
     GPIO.output(relaisPin, False)
+    time.sleep(time_sleep_relay)#attend 1 secondes sans rien faire
+    GPIO.output(relaisPin, True)
 ##
 def worker():
     oldcb =""
